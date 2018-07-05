@@ -1,0 +1,25 @@
+# Codigo en Python 3.6.5
+
+usuarios = ["jose.ojeda", "manuel.gonzales"]
+contraseñas = ["Utec1234", "Jose9856"]
+
+accion = int(input("Seleccione la opcion deseada: (1)Ingresar (2)Crear cuenta: "))
+
+if accion == 1:
+    user = input("Ingrese su usuario: ")
+    contraseña = input("Ingrese su contraseña: ")
+    if user in usuarios and contraseña in contraseñas:
+        print("Bienvenid@", user)
+    else:
+        print("Usuario o contrasena invalida")
+
+
+elif accion == 2:
+    crearU = input("Ingrese un usuario: ")
+    crearC = input("Ingrese una contrasena: ")
+    if crearU not in usuarios:
+        usuarios.append(crearU)
+        contraseñas.append(crearC)
+        print("Su usuario",crearU,"se creo correctamente")
+    else:
+        print("Usuario ya existente. Intente nuevamente con uno diferente")
